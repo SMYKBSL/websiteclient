@@ -16,10 +16,11 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
+    "react-styleguidist": "^7.0.20",
     "react-test-renderer": "^16.4.1"
   },
   "jest": {
-    "collectCoverageFrom" : [
+    "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/",
       "!<rootDir>/path/to/dir/"
@@ -32,8 +33,10 @@
         "statements": 90
       }
     },
-    "coverageReporters": ["text"]
-   },
+    "coverageReporters": [
+      "text"
+    ]
+  },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote --write",
@@ -43,6 +46,8 @@
   "scripts": {
     "precommit": "lint-staged",
     "flow": "flow",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
