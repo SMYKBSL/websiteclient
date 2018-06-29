@@ -2,21 +2,17 @@
 
 import { shallow } from 'enzyme';
 import React from 'react';
-import App from '../src/App';
+import App from '../App';
 
 describe('App', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(
-      <App />,
-    );
+    wrapper = shallow(<App />);
   });
 
   it('initializes `selectedFoods` to a blank array', () => {
-    expect(
-      wrapper.state().selectedFoods,
-    ).toEqual([]);
+    expect(wrapper.state().selectedFoods).toEqual([]);
   });
 
   describe('when `FoodSearch` invokes `onFoodClick` twice', () => {
@@ -25,7 +21,7 @@ describe('App', () => {
       kcal: '100.0',
       protein_g: '11.0',
       fat_g: '21.0',
-      carbohydrate_g: '31.0',
+      carbohydrate_g: '31.0'
     };
 
     const food2 = {
@@ -33,31 +29,33 @@ describe('App', () => {
       kcal: '200.0',
       protein_g: '12.0',
       fat_g: '22.0',
-      carbohydrate_g: '32.0',
+      carbohydrate_g: '32.0'
     };
-    const foods = [ food1, food2 ];
+    const foods = [food1, food2];
 
     beforeEach(() => {
-      foods.forEach(food => (
-        wrapper.find('FoodSearch').props().onFoodClick(food)
-      ));
+      foods.forEach(food =>
+        wrapper
+          .find('FoodSearch')
+          .props()
+          .onFoodClick(food)
+      );
     });
 
     it('should add the foods to `selectedFoods`', () => {
-      expect(
-        wrapper.state().selectedFoods,
-      ).toEqual(foods);
+      expect(wrapper.state().selectedFoods).toEqual(foods);
     });
 
     describe('and then `SelectedFoods` invokes `onFoodClick`', () => {
       beforeEach(() => {
-        wrapper.find('SelectedFoods').props().onFoodClick(0);
+        wrapper
+          .find('SelectedFoods')
+          .props()
+          .onFoodClick(0);
       });
 
       it('removes the food at idx from array', () => {
-        expect(
-          wrapper.state().selectedFoods,
-        ).toEqual([ food2 ]);
+        expect(wrapper.state().selectedFoods).toEqual([food2]);
       });
     });
   });
