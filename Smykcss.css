@@ -1,0 +1,41 @@
+body {
+    background-color: #d9d9d9;
+}
+img{
+	width:96px;height:96px;
+	background-color:#d9d9d9;
+}
+
+	h1{
+
+	font-family: Courier New;
+    font-size: 20px;
+    text-align: center;
+    border-style: ridge; 
+    border-width: 2px 10px 4px 20px;
+    border-color: #bfbfbf;
+
+
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-family: Courier New;
+}
+
+p {
+    font-family: Courier New;
+    font-size: 20px;
+    text-align: center;
+}
+
+div {
+	color: black;
+	text-align: right;
+    font-family: Courier New;
+    letter-spacing: 5px;	
+
+
+
+}
