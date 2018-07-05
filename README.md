@@ -1,3 +1,5 @@
+https://circleci.com/gh/SMYKBSL/websiteclient.svg?circle-token=2a72f1f5a990100d604605440b19eeadbe03b883
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
