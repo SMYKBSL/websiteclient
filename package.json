@@ -124,7 +124,8 @@
     "build": "npm-run-all build-css build-js",
     "test": "node scripts/test.js --env=jsdom",
     "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
-    "coverage": "npm test -- --coverage"
+    "coverage": "npm test -- --coverage",
+    "testCI": "yarn test --ci --coverage"
   },
   "devDependencies": {
     "concurrently": "^3.6.0",
