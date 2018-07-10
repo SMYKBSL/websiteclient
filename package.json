@@ -93,6 +93,12 @@
       "node",
       "mjs"
     ],
+    "coverageDirectory": "/test-results/",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/.node/",
+      "/jest/"
+    ],
     "coverageReporters": [
       "text"
     ],
