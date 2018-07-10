@@ -35,3 +35,4 @@ jobs:
         
       # run tests!
       - run: yarn testCI
+        post: - bash <(curl -s https://codecov.io/bash)
