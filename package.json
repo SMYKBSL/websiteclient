@@ -39,9 +39,13 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "test/**/*.{js,jsx}",
+      "**/*.{js,jsx}",
       "!<rootDir>/node_modules/",
-      "!<rootDir>/path/to/dir/"
+      "!<rootDir>/path/to/dir/",
+      "!<rootDir>/src/semantic/**",
+      "!<rootDir>/config/**",
+      "!<rootDir>/build/**",
+      "!<rootDir>/scripts/**"
     ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
