@@ -1,9 +1,9 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import FoodSearch from '../FoodSearch';
-import Client from '../Client';
+import FoodSearch from '../src/FoodSearch';
+import Client from '../src/Client';
 
-jest.mock('../Client');
+jest.mock('../src/Client');
 
 describe('FoodSearch', () => {
   let wrapper;
