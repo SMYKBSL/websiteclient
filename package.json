@@ -122,8 +122,10 @@
     "test-with-coverage": "NODE_ENV=test YOURPACKAGE_COVERAGE=1 mocha --compilers js:babel-core/register --require blanket --reporter mocha-lcov-reporter | codacy-coverage"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "23.4.0",
+    "babel-preset-flow": "^6.23.0",
     "chai": "^4.1.2",
     "concurrently": "^3.6.0",
     "enzyme": "^3.3.0",
