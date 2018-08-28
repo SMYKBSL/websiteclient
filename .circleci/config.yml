@@ -34,7 +34,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: yarn testCI && bash <(curl -s https://codecov.io/bash)
+      - run: yarn test-with-coverage
+      - run: yarn testCI && yarn test-with-coverage && bash <(curl -s https://codecov.io/bash)
 
       - store_test_results:
           path: test-results

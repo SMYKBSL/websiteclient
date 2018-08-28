@@ -2,21 +2,20 @@
 		"version": "0.2.0",
 	    "configurations": [
 			{
-				"name": "Debug CRA Tests",
 				"type": "node",
 				"request": "launch",
-				"runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",      
+				"name": "Mocha Tests",
+				"program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
 				"args": [
-					"test",
-					"--runInBand",
-					"--no-cache",
-					"--env=jsdom"
+					"-u",
+					"tdd",
+					"--timeout",
+					"999999",
+					"--colors",
+					"${workspaceFolder}/test"
 				],
-				"cwd": "${workspaceRoot}",
-				"protocol": "inspector",
-				"console": "integratedTerminal",
-				"internalConsoleOptions": "neverOpen"
-		    },
+				"internalConsoleOptions": "openOnSessionStart"
+			},
 			{
 				"name": "Chrome",
 				"type": "chrome",
