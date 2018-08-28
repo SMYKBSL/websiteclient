@@ -37,7 +37,8 @@
     "style-loader": "0.21.0",
     "sw-precache-webpack-plugin": "0.11.5",
     "url-loader": "1.0.1",
-    "whatwg-fetch": "2.0.4"
+    "whatwg-fetch": "2.0.4",
+    "snyk": "^1.89.0"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -118,6 +119,8 @@
     "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
     "coverage": "npm test -- --coverage",
     "testCI": "yarn test --ci --coverage",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect",
     "mocha": "NODE_ENV=test mocha ./test/*.js --compilers js:babel-core/register --reporter spec",
     "test-with-coverage": "NODE_ENV=test YOURPACKAGE_COVERAGE=1 mocha --compilers js:babel-core/register --require blanket --reporter mocha-lcov-reporter | codacy-coverage"
   },
@@ -154,5 +157,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "snyk": true
 }
